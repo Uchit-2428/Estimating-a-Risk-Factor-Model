@@ -1,5 +1,3 @@
-# Estimating-a-Risk-Factor-Model
-
 
 # Risk Factor Modeling of Apple (AAPL) Using Fama-French 4-Factor Model
 
@@ -10,14 +8,16 @@ This project builds a factor-based regression model using live market data and i
 
 ## Project Overview
 
-- **Objective**:  
+- **Objective**:
+  
   Model and explain Apple's excess stock returns based on four major risk factors:
   - **Mkt-RF**: Market Risk Premium (Market Return minus Risk-Free Rate)
   - **SMB**: Small Minus Big (Size Effect)
   - **HML**: High Minus Low (Value vs Growth Effect)
   - **MOM**: Momentum (Winners Minus Losers)
 
-- **Model Used**:  
+- **Model Used**:
+  
   The Fama-French 4-Factor model used here is:
 
   **(Return of Apple - Risk-Free Rate) = Alpha + Beta_Mkt (Market - Risk-Free) + Beta_SMB (SMB) + Beta_HML (HML) + Beta_MOM (MOM) + Error**
