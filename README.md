@@ -1,132 +1,67 @@
 # Estimating-a-Risk-Factor-Model
 
-:
 
-📈 Risk Factor Modeling of Apple (AAPL) Using Fama-French 4-Factor Model
-Welcome to the repository for Risk Factor Modeling of Apple Inc. (AAPL) using the Fama-French 4-Factor Model.
+# Risk Factor Modeling of Apple (AAPL) Using Fama-French 4-Factor Model
+
+Welcome to the repository for **Risk Factor Modeling** of **Apple Inc. (AAPL)** using the **Fama-French 4-Factor Model**.  
 This project builds a factor-based regression model using live market data and interprets Apple's behavior relative to systematic risk factors.
 
-📚 Project Overview
-Objective:
-Model and explain Apple's excess stock returns based on four major risk factors:
+---
 
-Mkt-RF: Market Risk Premium (Market Return minus Risk-Free Rate)
+## Project Overview
 
-SMB: Small Minus Big (Size Effect)
+- **Objective**:  
+  Model and explain Apple's excess stock returns based on four major risk factors:
+  - **Mkt-RF**: Market Risk Premium (Market Return minus Risk-Free Rate)
+  - **SMB**: Small Minus Big (Size Effect)
+  - **HML**: High Minus Low (Value vs Growth Effect)
+  - **MOM**: Momentum (Winners Minus Losers)
 
-HML: High Minus Low (Value vs Growth Effect)
+- **Model Used**:  
+  The Fama-French 4-Factor model used here is:
 
-MOM: Momentum (Winners Minus Losers)
+  **(Return of Apple - Risk-Free Rate) = Alpha + Beta_Mkt (Market - Risk-Free) + Beta_SMB (SMB) + Beta_HML (HML) + Beta_MOM (MOM) + Error**
 
-Model Used:
-The Fama-French 4-Factor model extends the traditional CAPM by adding size, value, and momentum effects.
-The model mathematically is:
+---
 
-(
-𝑅
-𝑖
-−
-𝑅
-𝑓
-)
-=
-𝛼
-+
-𝛽
-𝑚
-(
-𝑅
-𝑚
-−
-𝑅
-𝑓
-)
-+
-𝛽
-𝑠
-SMB
-+
-𝛽
-𝑣
-HML
-+
-𝛽
-𝑚
-𝑜
-𝑚
-MOM
-+
-𝜖
-(R 
-i
-​
- −R 
-f
-​
- )=α+β 
-m
-​
- (R 
-m
-​
- −R 
-f
-​
- )+β 
-s
-​
- SMB+β 
-v
-​
- HML+β 
-mom
-​
- MOM+ϵ
-Where:
+## Tools and Libraries Used
 
-𝑅
-𝑖
-R 
-i
-​
- : Return of Apple (AAPL)
+- Python 3.x
+- yfinance — for fetching AAPL stock data
+- pandas — for data manipulation
+- statsmodels — for OLS regression and statistical analysis
+- matplotlib — for plotting and visualization
 
-𝑅
-𝑓
-R 
-f
-​
- : Risk-Free Rate
+---
 
-𝛽
-β's: Sensitivities to each factor
+## Key Findings
 
-𝜖
-ϵ: Idiosyncratic (company-specific) error
+- The Fama-French 4-Factor Model explains approximately **28.8%** of Apple's excess return variability.
+- Apple shows:
+  - **Strong positive sensitivity** to the market factor (Mkt-RF).
+  - **Strong negative sensitivity** to the value factor (HML), confirming that Apple behaves like a **growth stock**.
+- Size (SMB) and Momentum (MOM) factors were not statistically significant for AAPL.
+- The model is **statistically significant overall** (p-value < 0.001).
 
-🛠️ Tools and Libraries Used
-Python 3.x
+---
 
-yfinance — for fetching AAPL stock data
+## How to Run
 
-pandas — for data manipulation
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/Risk_Factor_Model.git
+   ```
 
-statsmodels — for OLS regression and statistical analysis
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-matplotlib — for plotting and visualization
+3. Open and run the `Risk_Factor_Model.ipynb` notebook step-by-step in Jupyter or Google Colab.
 
-scikit-learn — for comparison if needed
+---
 
-  Key Findings
-The Fama-French 4-Factor Model explains approximately 28.8% of Apple's excess return variability.
 
-Apple shows:
 
-Strong positive sensitivity to the market factor (Mkt-RF).
 
-Strong negative sensitivity to the value factor (HML), confirming that Apple behaves like a growth stock.
-
-Size (SMB) and Momentum (MOM) factors were not statistically significant for AAPL.
-
-The model is statistically significant overall (p-value < 0.001).
 
