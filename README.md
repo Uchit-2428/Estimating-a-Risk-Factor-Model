@@ -22,6 +22,18 @@ This project builds a factor-based regression model using live market data and i
 
   **(Return of Apple - Risk-Free Rate) = Alpha + Beta_Mkt (Market - Risk-Free) + Beta_SMB (SMB) + Beta_HML (HML) + Beta_MOM (MOM) + Error**
 
+  Where:
+
+  | Parameter        | Meaning |
+  |------------------|---------|
+  | **Alpha (α)**     | Intercept: Average return unexplained by the four factors |
+  | **Beta_Mkt**      | Sensitivity to market return movements |
+  | **Beta_SMB**      | Sensitivity to size effect (small vs. big stocks) |
+  | **Beta_HML**      | Sensitivity to value vs. growth effect |
+  | **Beta_MOM**      | Sensitivity to momentum trends |
+  | **Error (ε)**     | Residual: Random, stock-specific deviation not captured by the model |
+
+
 ---
 
 ## Tools and Libraries Used
